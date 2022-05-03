@@ -537,22 +537,22 @@ section#banner
 
 
  #products h2 {
-   margin-top: 24px;
-   font-size: 35px;
+   margin-top:24px;
+   font-size:35px;
    text-transform: uppercase;
  }
 
 
  #productsDisplay {
-   display: flex;
-   justify-content: center;
-   gap: 40px;
-   margin-top: 40px;
+   display:flex;
+   justify-content:center;
+   gap:40px;
+   margin-top:40px;
  }
 
 
  #productsDisplay div img {
-   width: 300px;
+   width:300px;
  }
 
 
