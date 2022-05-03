@@ -526,7 +526,7 @@ section#banner
    bottom: 0;
    left: 0;
  }
- #products .leftBorder{
+ #products .leftBorder {
    background-image: url(./images/product_left.jpeg);
    height: 100%;
    width: 8px;
@@ -537,8 +537,8 @@ section#banner
 
 
  #products h2 {
-   margin-top:24px;
-   font-size:35px;
+   margin-top: 24px;
+   font-size: 35px;
    text-transform: uppercase;
  }
 
@@ -546,13 +546,13 @@ section#banner
  #productsDisplay {
    display:flex;
    justify-content:center;
-   gap:40px;
-   margin-top:40px;
+   gap: 40px;
+   margin-top: 40px;
  }
 
 
  #productsDisplay div img {
-   width:300px;
+   width: 300px;
  }
 
 
