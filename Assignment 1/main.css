@@ -2,4 +2,356 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
 /*
 Color Combinations
+   ========================================================================== */
 /*
+#a55e3f - Brown
+#0d1e64 - Dark Blue
+*/
+/*
+Global Styles
+   ========================================================================== */
+   body {
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     color: #a55e3f;
+   }
+
+   p{
+     line-height: 24px;
+   }
+
+   h1,h2,h3,h4,h5,h6 {
+     font-family:   font-family: 'Alegreya', serif;
+     font-weight: 500;
+     letter-spacing: .165em;
+     margin-bottom: 16px; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header
+{
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #a55e3f;
+  background-color: white;
+}
+
+
+header nav
+{
+  display:flex;
+  gap:30px;
+  position:relative;
+}
+
+header a
+{
+  text-transform:uppercase;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  color:#a55e3f;
+  padding:0 3px;
+}
+
+/* Individual Navigation Menu Item */
+header nav .menuItem {
+  overflow:hidden;
+}
+
+/* The Line Container */
+.colouredLine {
+  display:flex;
+  height:1px;
+  width:100%;
+  padding-top:8px;
+  margin-left:-100%;
+  transition:all .2s;
+}
+
+/* The First Line */
+.colouredLine span:first-of-type {
+  width: 37%;
+  height: 100%;
+  background-color: #0d1e64;
+}
+
+/* The Second Line */
+.colouredLine span:last-of-type {
+  width:63%;
+  height:100%;
+  background-color:#a55e3f;
+}
+
+/* Animation on Hover */
+header nav .menuItem:hover .colouredLine {
+  margin-left: 0;
+}
+
+header nav .menuItem.active .colouredLine {
+  margin-left: 0 !important;
+}
+
+/* Sub Menu on hover over Blog Nav Link */
+.subMenu {
+  background-color: white;
+  position: absolute;
+  width: 100px;
+  box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+  padding: 24px 32px;
+  top: 0px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  transition: all .2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.subMenu
+p {
+  color: grey;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+
+.subMenu
+p:hover
+{
+  color: rgba(0,0,0,.85);
+}
+
+
+nav .menuItem.dropdown:hover .subMenu
+{
+  top:59px;
+  visibility:visible;
+  opacity:1;
+}
+
+
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+
+section#banner
+{
+  background-image:url(./images/banner.jpeg);
+  height:90VH;
+  background-size:cover;
+  background-position:center center;
+  display:flex;
+  flex-flow:column;
+  justify-content:center;
+  align-items:center;
+  gap:34px;
+}
+#banner h1 {
+  font-size:70px;
+  color:white;
+  letter-spacing:8px;
+}
+#banner p {
+  color:white;
+  font-size:18px;
+  width:800px;
+  text-align:center;
+  line-height:30px;
+  font-style:italic;
+    margin-bottom:20px;
+}
+#banner a
+{
+  text-decoration:none;
+  text-transform:uppercase;
+  color:white;
+  font-size:12px;
+  letter-spacing:6px;
+  padding:24px 50px;
+  background-image: url(./images/button_background_image.jpeg);
+  background-repeat: no-repeat;
+
+  /* backgroun-position: x y; */
+
+  /* background-position: 50% 50%; */
+
+  background-position:center center;
+  background-size:cover;
+  background-size:auto 62px ;
+  transition:all .2s;
+}
+
+
+#banner a:hover {
+  background-position:47% 50%;
+}
+
+/* ==========================================================================
+   About Container
+   ========================================================================== */
+
+#aboutContainer {
+  position:relative;
+}
+#aboutContainer:before {
+  content:'';
+  background-image:url(./svgs/vector1.svg);
+  background-size:cover;
+  position:absolute;
+  top:0;
+  right:0;
+  width:700px;
+  height:700px;
+  background-repeat:no-repeat;
+  background-position:350px -170px;
+  z-index:-1; }
+/*
+   About Section
+   ==========================================================================
+   */
+#about
+{
+  width:1300px;
+  margin:0 auto;
+  padding:120px 0;
+  display:flex;
+  gap:100px;
+}
+#about h2 {
+  font-size:35px;
+  margin-top:8px;
+}
+#about h4 {
+  font-size:19px;
+}
+#aboutSubSections {
+  display:flex;
+  gap:24px;
+  margin-top:48px;
+}
+#aboutSubSections p {
+  color:#58595b;
+  margin-bottom:40px;
+}
+#aboutSubSections a {
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2.5px;
+  color:#a55e3f;
+  font-weight:400;
+}
+#aboutSubSections a div {
+  letter-spacing:0px;
+  font-size:0px;
+}
+#aboutSubSections a div span {
+  display: inline-block;
+  width:15px;
+  height:2px;
+  transition:all .2s;
+}
+#aboutSubSections a div span:nth-child(1) {
+  background-color:#741513;
+  width:0px;
+}
+#aboutSubSections a div span:nth-child(2) {
+  background-color:#e29c6d;
+}
+#aboutSubSections a div span:nth-child(3) {
+  background-color:#0d1e64;
+  margin-right:14px;
+}
+#aboutSubSections a:hover div span:nth-child(1) {
+  width:15px;
+}
+/*
+   Collage Section
+   ==========================================================================
+   */
+#collage {
+  width:1300px;
+  height:650px;
+  margin:0 auto;
+  display:flex;
+}
+
+
+#singleCollage, #smallerCollage {
+  position: relative;
+  width: 50%;
+}
+
+/* All 5 Images below: */
+#collage #singleCollage {
+  background-image: url(./images/collage_1.jpeg);
+  background-size: contain;}
+#smallerCollage div:nth-child(1) {
+  background-image: url(./images/collage_2.jpeg);
+  background-size: contain;}
+#smallerCollage div:nth-child(2) {
+  background-image: url(./images/collage_3.jpeg);
+  background-size: contain;}
+#smallerCollage div:nth-child(3) {
+  background-image: url(./images/collage_4.jpeg);
+  background-size: contain;}
+#smallerCollage div:nth-child(4) {
+  background-image: url(./images/collage_5.jpeg);
+  background-size: contain;}
+#collage #smallerCollage {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/* This will set all of the 4 children inside the #smallerCollage to 50% each of the #smallerCollage  */
+
+
+#collage #smallerCollage div {
+  position:relative;
+  width:50%;
+}
+
+
+/* The Overlay over the Image */
+#collage span {
+  position:absolute;
+  display:block;
+  padding:16px 0;
+  background-color:white;
+  text-align:center;
+  width:90%;
+  margin-left:5%;
+  opacity:0;
+  bottom:0px;
+  transition:all .4s;
+}
+
+
+#collage span h6 {
+  text-transform: uppercase;
+  font-size:18px;
+  margin-bottom:0px;
+}
+
+
+#collage span p {
+  color:grey;
+}
+
+/* Hover effect on the bigger & smaller images */
+#singleCollage:hover span,
+#smallerCollage > div:hover span
+{
+  opacity: 1;
+  bottom: 20px;
+   }
